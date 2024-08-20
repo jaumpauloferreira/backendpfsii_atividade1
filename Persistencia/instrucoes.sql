@@ -15,4 +15,5 @@ CREATE TABLE funcionario(
     func_cargo VARCHAR(100) NOT NULL,
     dep_codigo INT NOT NULL,
     CONSTRAINT pk_funcionario PRIMARY KEY(func_codigo),
+    CONSTRAINT fk_departamento_funcionario FOREIGN KEY(dep_codigo) REFERENCES departamento(dep_codigo)
 );

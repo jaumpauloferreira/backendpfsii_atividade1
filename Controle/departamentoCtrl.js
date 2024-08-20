@@ -15,13 +15,13 @@ export default class DepartamentoCtrl {
                     resposta.status(200).json({
                         "status": true,
                         "codigoGerado": departamento.codigo,
-                        "mensagem": "Departamento incluído com sucesso!"
+                        "mensagem": "Departamento cadastrado com sucesso!"
                     });
                 })
                     .catch((erro) => {
                         resposta.status(500).json({
                             "status": false,
-                            "mensagem": "Erro ao registrar a departamento:" + erro.message
+                            "mensagem": "Erro ao cadastrar o departamento:" + erro.message
                         });
                     });
             }

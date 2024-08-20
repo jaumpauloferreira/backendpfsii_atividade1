@@ -18,13 +18,13 @@ export default class FuncionarioCtrl {
                     resposta.status(200).json({
                         "status": true,
                         "codigoGerado": funcionario.codigo,
-                        "mensagem": "Funcionario incluído com sucesso!"
+                        "mensagem": "Funcionario cadastrado com sucesso!"
                     });
                 })
                     .catch((erro) => {
                         resposta.status(500).json({
                             "status": false,
-                            "mensagem": "Erro ao registrar o funcionario:" + erro.message
+                            "mensagem": "Erro ao cadastrar o funcionario:" + erro.message
                         });
                     });
             }
