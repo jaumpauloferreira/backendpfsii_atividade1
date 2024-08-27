@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import rotaLogin from './Rotas/rotaLogin.js';
 import rotaDepartamento from './Rotas/rotaDepartamento.js';
 import rotaFuncionario from './Rotas/rotaFuncionario.js';
 import dotenv from 'dotenv';
@@ -23,7 +22,6 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 6 } // Configura a expiração do cookie da sessão
 }));
 
-app.use('/login', rotaLogin);
 
 // Rotas acessíveis sem verificação de segurança
 app.use('/departamento', rotaDepartamento);
