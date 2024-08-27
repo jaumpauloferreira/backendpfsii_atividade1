@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { autenticar } from "../Seguranca/autenticacao.js"
 
 const rotaLogin = new Router();
-rotaLogin.post('/', (req, res)=>{
-    autenticar(req, res)
-})
+
+rotaLogin.post('/', (req, res) => {
+    
+    res.json({ mensagem: "Login efetuado com sucesso!" });
+});
 
 export default rotaLogin;
