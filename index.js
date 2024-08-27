@@ -22,8 +22,6 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 6 } // Configura a expiração do cookie da sessão
 }));
 
-
-// Rotas acessíveis sem verificação de segurança
 app.use('/departamento', rotaDepartamento);
 app.use('/funcionario', rotaFuncionario);
 
